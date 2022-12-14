@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VRCExpressions>
+<VRCExpressionParameters>
+  <VRCEmote   value-type="int"   default-value="0" saved="false"/>
+  <Horizontal value-type="float" default-value="0" saved="false"/>
+  <Vertical   value-type="float" default-value="0" saved="false"/>
+  <Up         value-type="float" default-value="0" saved="false"/>
+  <Right      value-type="float" default-value="0" saved="false"/>
+  <Down       value-type="float" default-value="0" saved="false"/>
+  <Left       value-type="float" default-value="0" saved="false"/>
+  <Radial     value-type="float" default-value="0" saved="false"/>
+  <Switch     value-type="bool"  default-value="1" saved="true"/>
+</VRCExpressionParameters>
+<VRCExpressionsMenus>
+  <RootMenu>
+    <Button         name="A" parameter="VRCEmote" value="1"/>
+    <SubMenu        name="SubMenu" parameter="VRCEmote" value="3" asset="SubMenuAsset"/>
+    <TwoAxisPuppet  name="TwoAxisPuppet" parameter="VRCEmote" value="4">
+      <Horizontal   parameter="Horizontal" left="Left" right="Right"/>
+      <Vertical     parameter="Vertical" up="Up" down="Down"/>
+    </TwoAxisPuppet>
+    <FourAxisPuppet name="FourAxisPuppet" parameter="VRCEmote" value="5">
+      <Up     parameter="Up" label="Up"/>
+      <Right  parameter="Right" label="Right"/>
+      <Down   parameter="Down" label="Down"/>
+      <Left   parameter="Left" label="Left"/>
+    </FourAxisPuppet>
+    <RadialPuppet   name="RadialPuppet" parameter="VRCEmote" value="6" rotation-parameter="Radial"/>
+    <OneAxisPuppet  name="OneAxisPuppet"></OneAxisPuppet>
+    <!-- Comment -->
+  </RootMenu>
+  <SubMenuAsset>
+    <Button name="A" parameter="VRCEmote" value="1"/>
+    <Toggle name="B" parameter="VRCEmote" value="2"/>
+    <Toggle name="C" parameter="VRCEmote" value="3"/>
+    <Toggle name="D" parameter="VRCEmote" value="4"/>
+    <Toggle name="E" parameter="VRCEmote" value="5"/>
+    <Toggle name="F" parameter="VRCEmote" value="6"/>
+    <Toggle name="G" parameter="VRCEmote" value="7"/>
+    <Toggle name="H" parameter="VRCEmote" value="8"/>
+    <Toggle name="I" parameter="VRCEmote" value="9"/>
+    <Toggle name="J" parameter="VRCEmote" value="10"/>
+  </SubMenuAsset>
+</VRCExpressionsMenus>
+</VRCExpressions>
