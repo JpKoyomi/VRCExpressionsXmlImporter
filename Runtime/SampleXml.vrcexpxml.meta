@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 40cd654629948f343a358a3a3b6a3b09
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 7c41f4492e4704c4f85eee4bc232957f, type: 3}
+  <XrefsMenu>k__BackingField: []
+  <MenuLabels>k__BackingField: []
