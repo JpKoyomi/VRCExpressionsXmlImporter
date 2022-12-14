@@ -1,0 +1,19 @@
+{
+    "name": "works.koyomi.vrc.expressions.xml.Editor",
+    "references": [
+        "VRC.SDK3A",
+        "VRC.SDK3A.Editor",
+        "VRC.SDKBase",
+        "VRC.SDKBase.Editor",
+        "works.koyomi.vrc.expressions.xml"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
