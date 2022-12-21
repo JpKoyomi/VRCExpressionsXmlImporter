@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿#if UNITY_EDITOR
+using System.Linq;
 using System.Collections.Generic;
 using UnityEditor.Experimental.AssetImporters;
 using UnityEditor;
@@ -89,3 +90,4 @@ namespace KLabs.VRC.SDK3.Avatars.ScriptableObjects
 		}
 	}
 }
+#endif
