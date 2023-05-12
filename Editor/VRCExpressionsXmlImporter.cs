@@ -85,11 +85,13 @@ namespace KLabs.VRC.SDK3.Avatars.ScriptableObjects
 				var type = element.Attribute("value-type");
 				var value = element.Attribute("default-value");
 				var saved = element.Attribute("saved");
+				var synced = element.Attribute("synced");
 
 				var p = new VRCExpressionParameters.Parameter() { name = element.Name.LocalName };
 				p.valueType = ParseType(type);
 				p.defaultValue = ParseValue(value);
 				p.saved = ParseSaved(saved);
+				p.networkSynced = ParseSynced(synced);
 				return p;
 			}
 
@@ -127,15 +129,28 @@ namespace KLabs.VRC.SDK3.Avatars.ScriptableObjects
 
 			private static bool ParseSaved(XAttribute attribute)
 			{
-				switch (attribute.Value)
+				if (attribute == null)
 				{
-					case "true":
-						return true;
-					case "false":
-						return false;
-					default:
-						throw new System.Exception();
+					return false;
 				}
+				if (bool.TryParse(attribute.Value, out var parsed))
+				{
+					return parsed;
+				}
+				return false;
+			}
+
+			private static bool ParseSynced(XAttribute attribute)
+			{
+				if (attribute == null)
+				{
+					return true;
+				}
+				if (bool.TryParse(attribute.Value, out var parsed))
+				{
+					return parsed;
+				}
+				return true;
 			}
 		}
 
@@ -207,8 +222,6 @@ namespace KLabs.VRC.SDK3.Avatars.ScriptableObjects
 							break;
 						case ControlType.RadialPuppet:
 							ParseRadialPuppet(control, item);
-							break;
-						case ControlType.OneAxisPuppet:
 							break;
 						default:
 							break;
