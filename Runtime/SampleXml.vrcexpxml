@@ -8,7 +8,7 @@
   <Right      value-type="float" default-value="0" saved="false"/>
   <Down       value-type="float" default-value="0" saved="false"/>
   <Left       value-type="float" default-value="0" saved="false"/>
-  <Radial     value-type="float" default-value="0" saved="false"/>
+  <Radial     value-type="float" default-value="0" saved="false" syncd="false"/>
   <Switch     value-type="bool"  default-value="1" saved="true"/>
 </VRCExpressionParameters>
 <VRCExpressionsMenus>
@@ -26,7 +26,6 @@
       <Left   parameter="Left" label="Left"/>
     </FourAxisPuppet>
     <RadialPuppet   name="RadialPuppet" parameter="VRCEmote" value="6" rotation-parameter="Radial"/>
-    <OneAxisPuppet  name="OneAxisPuppet"></OneAxisPuppet>
     <!-- Comment -->
   </RootMenu>
   <SubMenuAsset>
